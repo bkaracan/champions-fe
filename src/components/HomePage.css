@@ -13,6 +13,8 @@
 
 .champions-slogan {
   /* ...mevcut stil tanımlamalarınız */
+  font-family: 'Kode Mono', monospace;
+  font-size: 16px;
   border-right: .1em solid white; /* İmleç gibi görünen dikey bir çizgi */
   white-space: nowrap; /* Metnin aynı satırda kalmasını sağlar */
   overflow: hidden; /* Metnin kutunun dışına taşmasını engeller */
@@ -40,10 +42,14 @@
   font-size: 20px; /* Buton punto büyüklüğünü burada ayarlayabilirsiniz */
   padding: 10px 20px;
   margin: 0 10px;
-  transition: background-color 0.3s; /* Renk değişim animasyon süresi */
+  transition: color 0.3s, background-color 0.3s; /* Renk değişim animasyon süresi */
+  /* Butonun başlangıç rengini ve yazı rengini belirleyebilirsiniz */
+  background-color: #ffffff; /* Butonun arka plan rengi */
+  color: #15F5BA; /* Butonun yazı rengi */
+  border: 1px solid #15F5BA; /* Butonun kenarlık rengi */
 }
 
 .home-button:hover {
-  background-color: #007bff; /* Buton üzerine gelindiğinde istediğiniz renk */
-  color: white;
+  background-color: #47A992; /* Buton üzerine gelindiğinde arka plan rengi */
+  color: black; /* Buton üzerine gelindiğinde yazı rengi */
 }
