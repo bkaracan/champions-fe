@@ -1,0 +1,49 @@
+/* HomePage.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
+
+.home-container {
+  text-align: center;
+}
+
+.champions-title {
+  font-family: 'Kode Mono', monospace;
+  font-size: 48px; /* İstediğiniz punto büyüklüğünü burada ayarlayabilirsiniz */
+}
+
+.champions-slogan {
+  /* ...mevcut stil tanımlamalarınız */
+  border-right: .1em solid white; /* İmleç gibi görünen dikey bir çizgi */
+  white-space: nowrap; /* Metnin aynı satırda kalmasını sağlar */
+  overflow: hidden; /* Metnin kutunun dışına taşmasını engeller */
+  animation: typing 2s steps(40, end), blink-caret .75s step-end infinite;
+  /* 40 adımda 2 saniye içinde yazma efekti ve yanıp sönme efekti */
+}
+
+/* Yazma animasyonu */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* İmleç yanıp sönme animasyonu */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: white }
+}
+
+.button-container {
+  margin-top: 20px;
+}
+
+.home-button {
+  font-size: 20px; /* Buton punto büyüklüğünü burada ayarlayabilirsiniz */
+  padding: 10px 20px;
+  margin: 0 10px;
+  transition: background-color 0.3s; /* Renk değişim animasyon süresi */
+}
+
+.home-button:hover {
+  background-color: #007bff; /* Buton üzerine gelindiğinde istediğiniz renk */
+  color: white;
+}
