@@ -1,6 +1,7 @@
 // RegistrationPage.js
 import React, { useState } from 'react';
 import axios from 'axios';
+import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 
 const apiUrl = 'http://localhost:8082';
 
@@ -23,37 +24,31 @@ const RegistrationPage = () => {
   };
 
   return (
-    <div>
-      <h2>Kayıt Ol</h2>
-      <form onSubmit={handleRegisterSubmit}>
-        <input
-          name="firstName"
-          value={registerData.firstName}
-          onChange={handleRegisterChange}
-          placeholder="İsim"
-        />
-        <input
-          name="lastName"
-          value={registerData.lastName}
-          onChange={handleRegisterChange}
-          placeholder="Soyisim"
-        />
-        <input
-          name="username"
-          value={registerData.username}
-          onChange={handleRegisterChange}
-          placeholder="Kullanıcı Adı"
-        />
-        <input
-          type="password"
-          name="password"
-          value={registerData.password}
-          onChange={handleRegisterChange}
-          placeholder="Şifre"
-        />
-        <button type="submit">Kayıt Ol</button>
-      </form>
-    </div>
+    <Container fluid className="py-5">
+      <Row className="justify-content-center">
+        <Col md={6}>
+          <div className="text-center mb-4">
+            <h2>Kayıt Ol</h2>
+            <p className="text-muted">Hemen kayıt olun ve bizimle bir adım öne geçin!</p>
+          </div>
+          <Form onSubmit={handleRegisterSubmit}>
+            <Form.Group>
+              <Form.Control type="text" name="firstName" value={registerData.firstName} onChange={handleRegisterChange} placeholder="İsim" required />
+            </Form.Group>
+            <Form.Group>
+              <Form.Control type="text" name="lastName" value={registerData.lastName} onChange={handleRegisterChange} placeholder="Soyisim" required />
+            </Form.Group>
+            <Form.Group>
+              <Form.Control type="text" name="username" value={registerData.username} onChange={handleRegisterChange} placeholder="Kullanıcı Adı" required />
+            </Form.Group>
+            <Form.Group>
+              <Form.Control type="password" name="password" value={registerData.password} onChange={handleRegisterChange} placeholder="Şifre" required />
+            </Form.Group>
+            <Button variant="primary" type="submit" className="w-100">Kayıt Ol</Button>
+          </Form>
+        </Col>
+      </Row>
+    </Container>
   );
 }
 
