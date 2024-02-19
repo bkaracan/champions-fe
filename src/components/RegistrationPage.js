@@ -6,7 +6,7 @@ import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 const apiUrl = 'http://localhost:8082';
 
 const RegistrationPage = () => {
-  const [registerData, setRegisterData] = useState({ firstName: '', lastName: '', username: '', password: '' });
+  const [registerData, setRegisterData] = useState({ firstName: '', lastName: '', username: '', email: '', password: '' });
 
   const handleRegisterChange = (e) => {
     setRegisterData({ ...registerData, [e.target.name]: e.target.value });
@@ -29,17 +29,19 @@ const RegistrationPage = () => {
         <Col md={6}>
           <div className="text-center mb-4">
             <h2>Kayıt Ol</h2>
-            <p className="text-muted">Hemen kayıt olun ve bizimle bir adım öne geçin!</p>
           </div>
           <Form onSubmit={handleRegisterSubmit}>
             <Form.Group>
-              <Form.Control type="text" name="firstName" value={registerData.firstName} onChange={handleRegisterChange} placeholder="İsim" required />
+              <Form.Control type="text" name="firstName" value={registerData.firstName} onChange={handleRegisterChange} placeholder="Ad" required />
             </Form.Group>
             <Form.Group>
-              <Form.Control type="text" name="lastName" value={registerData.lastName} onChange={handleRegisterChange} placeholder="Soyisim" required />
+              <Form.Control type="text" name="lastName" value={registerData.lastName} onChange={handleRegisterChange} placeholder="Soyad" required />
             </Form.Group>
             <Form.Group>
               <Form.Control type="text" name="username" value={registerData.username} onChange={handleRegisterChange} placeholder="Kullanıcı Adı" required />
+            </Form.Group>
+            <Form.Group>
+              <Form.Control type="text" name="email" value={registerData.email} onChange={handleRegisterChange} placeholder="e-mail" required />
             </Form.Group>
             <Form.Group>
               <Form.Control type="password" name="password" value={registerData.password} onChange={handleRegisterChange} placeholder="Şifre" required />
