@@ -20,16 +20,16 @@ const HomePage = () => {
         <TypingEffect
           text="League of Legends şampiyonları ve yeteneklerine dair her şey..."
           speed={80}
-          onComplete={showButtonsAfterText} // onComplete prop'una fonksiyonu geçir
+          onComplete={showButtonsAfterText}
         />
       </p>
       {buttonsVisible && (
         <div className="button-container">
           <Link to="/register">
-            <button className="home-button">Kayıt ol</button>
+            <button className="home-button sign-up">Kayıt ol</button>
           </Link>
           <Link to="/login">
-            <button className="home-button">Giriş yap</button>
+            <button className="home-button log-in">Giriş yap</button>
           </Link>
         </div>
       )}

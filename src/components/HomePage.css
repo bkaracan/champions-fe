@@ -7,14 +7,24 @@
 }
 
 .champions-title {
+  opacity: 0;
+  animation: fadeIn 5s ease forwards;
+  color: #15F5BA;
   font-family: 'Kode Mono', monospace;
   font-size: 48px; /* İstediğiniz punto büyüklüğünü burada ayarlayabilirsiniz */
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }
 
 .champions-slogan {
   /* ...mevcut stil tanımlamalarınız */
   font-family: 'Kode Mono', monospace;
   font-size: 16px;
+  color: #15F5BA;
   border-right: .1em solid white; /* İmleç gibi görünen dikey bir çizgi */
   white-space: nowrap; /* Metnin aynı satırda kalmasını sağlar */
   overflow: hidden; /* Metnin kutunun dışına taşmasını engeller */
@@ -28,17 +38,13 @@
   to { width: 100% }
 }
 
-/* İmleç yanıp sönme animasyonu */
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: white }
-}
-
 .button-container {
   margin-top: 20px;
 }
 
-.home-button {
+.home-button.sign-up {
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
   font-family: 'Kode Mono', monospace;
   font-size: 20px; /* Buton punto büyüklüğünü burada ayarlayabilirsiniz */
   padding: 10px 20px;
@@ -48,6 +54,26 @@
   background-color: #ffffff; /* Butonun arka plan rengi */
   color: #15F5BA; /* Butonun yazı rengi */
   border: 1px solid #15F5BA; /* Butonun kenarlık rengi */
+}
+
+.home-button.log-in {
+  opacity: 0;
+  animation: fadeIn 2s ease forwards 0.5s;
+  font-family: 'Kode Mono', monospace;
+  font-size: 20px; /* Buton punto büyüklüğünü burada ayarlayabilirsiniz */
+  padding: 10px 20px;
+  margin: 0 10px;
+  transition: color 0.3s, background-color 0.3s; /* Renk değişim animasyon süresi */
+  /* Butonun başlangıç rengini ve yazı rengini belirleyebilirsiniz */
+  background-color: #ffffff; /* Butonun arka plan rengi */
+  color: #15F5BA; /* Butonun yazı rengi */
+  border: 1px solid #15F5BA; /* Butonun kenarlık rengi */
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }
 
 .home-button:hover {
