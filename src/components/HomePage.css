@@ -28,8 +28,6 @@
   border-right: .1em solid white; /* İmleç gibi görünen dikey bir çizgi */
   white-space: nowrap; /* Metnin aynı satırda kalmasını sağlar */
   overflow: hidden; /* Metnin kutunun dışına taşmasını engeller */
-  animation: typing 2s steps(40, end), blink-caret .75s step-end infinite;
-  /* 40 adımda 2 saniye içinde yazma efekti ve yanıp sönme efekti */
 }
 
 /* Yazma animasyonu */

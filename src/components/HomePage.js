@@ -4,9 +4,16 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import TypingEffect from './TypingEffect';
 import './HomePage.css';
+import clickSound from './button-click.mp3'; // Ses dosyasını import edin
+
 
 const HomePage = () => {
   const [buttonsVisible, setButtonsVisible] = useState(false);
+  const clickAudio = new Audio(clickSound); // Ses dosyasını bir Audio objesi olarak yükle
+
+  const playClickSound = () => {
+    clickAudio.play(); // Fonksiyon çağrıldığında ses efektini oynat
+  };
 
   // TypingEffect'ten metin tamamlandıktan sonra çağrılacak fonksiyon
   const showButtonsAfterText = () => {
@@ -26,10 +33,10 @@ const HomePage = () => {
       {buttonsVisible && (
         <div className="button-container">
           <Link to="/register">
-            <button className="home-button sign-up">Kayıt ol</button>
+            <button className="home-button sign-up" onClick={playClickSound}>Kayıt ol</button>
           </Link>
           <Link to="/login">
-            <button className="home-button log-in">Giriş yap</button>
+            <button className="home-button log-in" onClick={playClickSound}>Giriş yap</button>
           </Link>
         </div>
       )}
