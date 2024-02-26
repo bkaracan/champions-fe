@@ -15,6 +15,7 @@ const RegistrationPage = () => {
     password: ''
   });
   const [isTypingComplete, setIsTypingComplete] = useState(false); // TypingEffect'in tamamlanma durumu
+  const [showModal, setShowModal] = useState(false); // Modal'ı kontrol etmek için yeni state
 
   const handleRegisterChange = (e) => {
     setRegisterData({ ...registerData, [e.target.name]: e.target.value });
@@ -25,6 +26,7 @@ const RegistrationPage = () => {
     try {
       const response = await axios.post(`${apiUrl}/register`, registerData);
       console.log('Registration Successful', response.data);
+      setShowModal(true);
     } catch (error) {
       console.error('Registration Error', error);
     }
@@ -53,9 +55,20 @@ const RegistrationPage = () => {
             <input type="text" name="username" value={registerData.username} onChange={handleRegisterChange} placeholder="Kullanıcı adı" required />
             <input type="email" name="email" value={registerData.email} onChange={handleRegisterChange} placeholder="e-mail" required />
             <input type="password" name="password" value={registerData.password} onChange={handleRegisterChange} placeholder="Şifre" required />
-            <button type="submit" className="register-btn">Create account</button>
+            <button type="submit" className="register-btn">Kaydol</button>
             <p className="login-link">Zaten bir hesabın var mı? <a href="/login">Giriş yap</a></p>
           </form>
+          {showModal && (
+            <div className="modal">
+              <div className="modal-content">
+                <span className="close" onClick={() => setShowModal(false)}>&times;</span>
+                <div className="modal-body">
+                  <p>Kaydınız başarıyla oluşturuldu.</p>
+                  <div className="checkmark">&#10004;</div> {/* Yeşil tik işaret, */}
+                </div>
+              </div>
+            </div>  
+          )}
         </div>
       )}
     </div>
