@@ -2,8 +2,16 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
 
+
+
 .home-container {
   text-align: center;
+}
+
+body {
+  background-color: #070F2B;
+  margin: 0;
+  font-family: 'Kode Mono', monospace;
 }
 
 .champions-title {
@@ -49,7 +57,7 @@
   margin: 0 10px;
   transition: color 0.3s, background-color 0.3s; /* Renk değişim animasyon süresi */
   /* Butonun başlangıç rengini ve yazı rengini belirleyebilirsiniz */
-  background-color: #ffffff; /* Butonun arka plan rengi */
+  background-color: #070F2B; /* Butonun arka plan rengi */
   color: #15F5BA; /* Butonun yazı rengi */
   border: 1px solid #15F5BA; /* Butonun kenarlık rengi */
 }
@@ -63,7 +71,7 @@
   margin: 0 10px;
   transition: color 0.3s, background-color 0.3s; /* Renk değişim animasyon süresi */
   /* Butonun başlangıç rengini ve yazı rengini belirleyebilirsiniz */
-  background-color: #ffffff; /* Butonun arka plan rengi */
+  background-color: #070F2B; /* Butonun arka plan rengi */
   color: #15F5BA; /* Butonun yazı rengi */
   border: 1px solid #15F5BA; /* Butonun kenarlık rengi */
 }

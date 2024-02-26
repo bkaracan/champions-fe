@@ -6,7 +6,7 @@
   justify-content: flex-start;
   align-items: center;
   height: 100vh;
-  background-color: #f7f7f7;
+  background-color: #070F2B;
 }
 
 .registration-title {
@@ -33,12 +33,12 @@
 }
 
 .registration-form {
-  background: white;
-  padding: 3rem; /* İç boşluğu artırarak form boyutunu büyütün */
-  border-radius: 8px;
+  background-color: #070F2B;
+  padding: 2rem; /* İç boşluğu artırarak form boyutunu büyütün */
+  border-radius: 20px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Gölgeyi daha belirgin yapın */
-  width: 90%; /* Formun genişliğini % olarak belirleyin */
-  max-width: 500px; /* Maksimum genişliği belirleyin */
+  width: 100%; /* Formun genişliğini % olarak belirleyin */
+  max-width: 450px; /* Maksimum genişliği belirleyin */
   opacity: 0; /* Başlangıçta form görünmez olacak */
   transform: translateY(20px); /* Formu yukarıdan aşağıya doğru hareket ettirin */
   animation: fadeInForm 1s ease forwards 0.5s; /* 0.5 saniye sonra belirme */
@@ -56,25 +56,24 @@
   animation: fadeIn 5s ease forwards;
   font-family: 'Kode Mono', monospace;
   font-size: 48px;
-  color: #333;
+  color: #070F2B  ;
   margin-bottom: 0.5rem;
 }
 
 .registration-form p {
   font-size: 14px;
-  color: #666;
 }
 
 .registration-form input {
   width: 100%;
-  padding: 10px;
+  padding: 5px;
   margin-bottom: 1rem;
-  border: 1px solid #ccc;
+  border: 1px solid #070F2B;
   border-radius: 4px;
 }
 
 .register-btn {
-  width: 100%;
+  width: 104%;
   padding: 10px;
   border: none;
   border-radius: 4px;
@@ -92,11 +91,12 @@
   text-align: center;
   margin-top: 1rem;
   font-size: 14px;
-  color: #666;
+  color: #15F5BA;
   }
   
   .login-link a {
   color: #007bff;
+  font-size: 18px;
   text-decoration: none;
   }
   
