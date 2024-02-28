@@ -1,0 +1,83 @@
+/* Champions.css */
+
+.champions-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-family: 'Kode Mono', monospace;
+    font-size: 16px;
+    margin-top: 20px;
+    font-size: 2.5em; /* Başlık font büyüklüğü */
+    color: #15F5BA; /* Başlık rengi */
+  }
+  
+  p {
+    font-family: 'Kode Mono', monospace;
+    font-size: 16px;
+    font-size: 1em;
+    color: #15F5BA; /* Alt başlık rengi */
+    margin-bottom: 20px;
+  }
+  
+  .search-bar {
+    margin: 20px 0;
+  }
+  
+  .search-bar input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 300px; /* Arama çubuğu genişliği */
+  }
+  
+  .champion-categories {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Butonlar arası boşluk */
+    margin-bottom: 20px;
+  }
+  
+  .champion-categories button {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .champion-categories button:hover {
+    background-color: #47A992; /* Buton üzerine gelindiğinde arka plan rengi */
+  }
+  
+  .champion-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Kartlar arası boşluk */
+    justify-content: center;
+  }
+  
+  .champion-card {
+    border: 1px solid #ccc;
+    color: #15F5BA;
+    border-radius: 4px;
+    width: 200px; /* Kart genişliği */
+    padding: 10px;
+    text-align: center;
+  }
+
+  .champion-card img {
+    width: 100%;  /* veya sabit bir genişlik değeri, örneğin 120px */
+    height: auto; /* Yükseklik otomatik olarak genişliğe göre ayarlanır */
+    object-fit: cover; /* Görüntüyü kesmeden veya sığdırmadan boyutlandırır */
+    border-radius: 10px; /* İsteğe bağlı: görüntü köşelerini yuvarlak yapar */
+  }
+  
+  .champion-card h3 {
+    margin-bottom: 10px; /* Kart başlık alt boşluğu */
+  }
+  
+  
