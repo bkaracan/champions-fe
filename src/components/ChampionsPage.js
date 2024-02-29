@@ -50,15 +50,14 @@ const ChampionsPage = () => {
 
       {/* Şampiyon kartları */}
       <div className="champions-card">
-        {champions.map(champion => (
-          <div key={champion.id} className="champion-card">
-            <h3>{champion.name}</h3>
-            <img src={'/images/' + champion.name.charAt(0).toUpperCase() + 
-            champion.name.slice(1).toLowerCase() + '.png'} alt={champion.name} />
-            {/* Şampiyon resmi ve diğer bilgiler buraya eklenecek */}
-          </div>
-        ))}
-      </div>
+  {champions.map(champion => (
+    <div key={champion.id} className="champion-card">
+      <img src={'/images/' + champion.name + '.png'} alt={champion.name} />
+      {/* Şampiyon resmi ve diğer bilgiler buraya eklenecek */}
+      <div className="champion-name-tag">{champion.name}</div>
+    </div>
+  ))}
+</div>
     </div>
   );
 };

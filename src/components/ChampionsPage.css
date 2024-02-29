@@ -47,6 +47,9 @@
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
+    font-family: "Anta", sans-serif;
+    font-weight: 400;
+    font-style: normal;
   }
   
   .champion-categories button:hover {
@@ -59,25 +62,77 @@
     gap: 20px; /* Kartlar arası boşluk */
     justify-content: center;
   }
+
+  .champions-card {
+    display: flex; /* Flexbox kullanarak elemanları yan yana dizer */
+    flex-wrap: wrap; /* Eğer ekran genişliği yetersizse, kartları yeni satıra taşır */
+    gap: 5px; /* Kartlar arası boşluk */
+    justify-content: center; /* Merkeze hizalar */
+    width: 100%; /* Konteyner genişliği */
+  }
   
   .champion-card {
-    border: 1px solid #ccc;
+    border: 1px solid #070F2B;
     color: #15F5BA;
     border-radius: 4px;
     width: 200px; /* Kart genişliği */
     padding: 10px;
     text-align: center;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 30px; /* Eğer kartlar alt alta gelirse aralarında boşluk oluşturur */
+    transition: transform 0.3s ease;
+    /* 'display: flex' ve 'justify-content' özelliklerini buradan kaldırdık */
   }
+  
 
   .champion-card img {
     width: 100%;  /* veya sabit bir genişlik değeri, örneğin 120px */
     height: auto; /* Yükseklik otomatik olarak genişliğe göre ayarlanır */
     object-fit: cover; /* Görüntüyü kesmeden veya sığdırmadan boyutlandırır */
     border-radius: 10px; /* İsteğe bağlı: görüntü köşelerini yuvarlak yapar */
+    transition: transform 0.3s ease;
+    display: block;
+  }
+
+  .champion-card:hover img {
+    transform: scale(1.05);
+  }
+
+  .champion-name-tag {
+    display: block;
+    text-align: center;
+    background-color: #47A992; /* Etiket arkaplan rengi */
+    color: #0C2D57; /* Etiket metin rengi */
+    padding: 5px 0; /* Dikey padding */
+    transition: background-color 0.3s ease; /* Renk değişimi animasyonu */
+    position: relative; /* Sayfanın akışına göre konumlandırma */
+    top: -5px; /* Etiketin kartın hemen altına yerleşmesi için */
+    margin: 0 auto; /* Otomatik marjlar ile etiketi merkezle */
+    width: 200px; /* Kart genişliği ile aynı olmalı */
+    font-family: "Anta", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .champion-card:hover .champion-name-tag {
+    background-color: #15F5BA; /* İmleç üzerine gelince etiket arkaplan rengi */
   }
   
   .champion-card h3 {
-    margin-bottom: 10px; /* Kart başlık alt boşluğu */
+    /* ... mevcut stilleriniz ... */
+    background-color: #15F5BA; /* Başlangıçta etiket rengi */
+    color: #ffffff; /* Etiket metin rengi */
+    padding: 5px 10px; /* Etiket padding'i */
+    position: absolute; /* Etiketin pozisyonlandırılması */
+    bottom: 10px; /* Alt kısımdan boşluk */
+    left: 50%; /* Sol kısımdan ortalanması */
+    transform: translateX(-50%); /* Yatay eksende tam ortalanması */
+    transition: background-color 0.3s ease; /* Renk değişimi için geçiş süresi */
+  }
+
+  .champion-card:hover h3 {
+    background-color: #47A992; /* İmleç üzerine gelince etiket rengi */
   }
   
   
